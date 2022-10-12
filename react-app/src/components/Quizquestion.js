@@ -11,8 +11,8 @@ const Quizquestion = ({qui}) => {
     };
     return (
         <div>
-            <div className="box border rounded-lg m-20 text-center pt-5 relative">
-                <p className='text-2xl mx-16'>Question:{qui.question}</p>
+            <div className="box border rounded-lg m-20  text-center pt-5 relative ">
+                <p className='text-2xl mx-2 mr-20'>Question:{qui.question}</p>
                 <EyeIcon onClick={handleClick} className="h-16 w-16 text-blue-500 absolute top-3 right-3"></EyeIcon>
                 <p
                  style={{
