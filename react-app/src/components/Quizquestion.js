@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Quizquestion = ({qui}) => {
     const notify = (ans) =>{
-    console.log(ans)
+    console.log(ans) 
 
         if (ans = qui.correctAnswer) {
             return toast( "Wow so easy!" );
