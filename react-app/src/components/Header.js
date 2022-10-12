@@ -29,7 +29,7 @@ const Header = () => {
               <rect x='14' y='11' width='7' height='12' />
             </svg>
             <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
-              proReader
+              quizMaster
             </span>
           </Link>
           <ul className='flex items-center hidden space-x-8 lg:flex'>
@@ -48,28 +48,28 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to='/books'
-                aria-label='Books'
-                title='Books'
+                to='/statistics'
+                aria-label='Statistics'
+                title='Statistics'
                 className={({ isActive }) =>
                 isActive ? 'font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' :
                 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                 }
               >
-                Books
+                Statistics
               </NavLink>
             </li>
             <li>
               <NavLink
-                to='/about'
-                aria-label='About us'
-                title='About us'
+                to='/blogs'
+                aria-label='Blogs'
+                title='Blogs'
                 className={({ isActive }) =>
                 isActive ? 'font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' :
                 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                 }
               >
-                About us
+                Blogs
               </NavLink>
             </li>
           </ul>
@@ -122,7 +122,7 @@ const Header = () => {
                           <rect x='14' y='11' width='7' height='12' />
                         </svg>
                         <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                          proReader
+                          Quiz Master
                         </span>
                       </Link>
                     </div>
@@ -156,22 +156,22 @@ const Header = () => {
                       </li>
                       <li>
                         <Link
-                          to='/books'
-                          aria-label='Books'
-                          title='Books'
+                          to='/statistics'
+                          aria-label='Statistics'
+                          title='Statistics'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          Books
+                          Statistics
                         </Link>
                       </li>
                       <li>
                         <Link
-                          to='/about'
-                          aria-label='About Us'
-                          title='About Us'
+                          to='/blogs'
+                          aria-label='Blogs'
+                          title='Blogs'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          About Us
+                          Blogs
                         </Link>
                       </li>
                     </ul>

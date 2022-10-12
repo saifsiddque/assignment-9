@@ -5,6 +5,9 @@ import Home from './Home'
 import About from './About'
 import Books from './Books'
 import BookDetails from './BookDetails'
+import Statistics from './Statistics'
+import Blogs from './Blogs'
+import Quiz from './Quiz'
 
 
 const router = createBrowserRouter([
@@ -12,36 +15,62 @@ const router = createBrowserRouter([
     path: '/',
     element: <Root></Root>,
     errorElement:<ErrorPage></ErrorPage>,
-    // children:[
-    //   {
-    //     path: '/',
-    //     element: <Home></Home>,
-    //   },
-    //   {
-    //     path: '/home',
-    //     element: <Home></Home>,
-    //   },
-    //   {
-    //     path: 'about',
-    //     element: <About></About>
+    children:[
+      {
+        path: '/',
+        element: <Home></Home>,
+        loader:() =>{
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        }
+      },
+      {
+        path: '/home',
+        element: <Home></Home>,
+        loader:() =>{
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        }
+
+      },
     
-    //   },
-    //   {
-    //     path: 'books',
-    //     element: <Books></Books>,
-    //     loader: () =>{
-    //         return fetch('https://api.itbook.store/1.0/new')
-    //     },
+      {
+        path: '/about',
+        element: <About></About>
     
-    //   },
-    //   {
-    //     path: 'book:id',
-    //     element: <BookDetails></BookDetails> ,
-    //     loader: ({params}) =>{
-    //         return fetch(`https://api.itbook.store/1.0/books/${params.id}`)
-    //     },
-    //   },
-    // ]
+      },
+      {
+        path: 'statistics',
+        element: <Statistics></Statistics>,
+        loader:() =>{
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        }
+    
+      },
+      {
+        path: 'blogs',
+        element: <Blogs></Blogs>
+    
+      },
+      {
+        path: 'books',
+        element: <Books></Books>,
+      },
+      // {
+      //   path: 'book:id',
+      //   element: <BookDetails></BookDetails> ,
+      //   loader: ({params}) =>{
+      //       return fetch(`https://api.itbook.store/1.0/books/${params.id}`)
+      //   },
+      // },
+      {
+        path: 'quiz:id',
+        element: <Quiz></Quiz>,
+        loader:({params}) =>{
+          return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+        }
+    
+
+      },
+    ]
   },
 
 ])
