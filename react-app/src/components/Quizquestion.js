@@ -7,7 +7,7 @@ const Quizquestion = ({qui}) => {
     const notify = (ans) =>{
     console.log(ans) 
 
-        if (ans = qui.correctAnswer) {
+        if (ans === qui.correctAnswer) {
             return toast( "Wow so easy!" );
           }
           return toast("Wow so hard");
